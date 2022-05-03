@@ -1,9 +1,9 @@
-import React from 'react'
-import e_candidate_edit_modal from './e_candidate_edit_modal'
+import React from 'react';
+import EditModal from './edit_modal.js';
 export default function App() {
   return (
     <div>
-      <e_candidate_edit_modal/>
+      <EditModal />
     </div>
-  )
+  );
 }
