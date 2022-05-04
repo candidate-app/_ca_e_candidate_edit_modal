@@ -37,7 +37,7 @@ const EditModal = (props) => {
     try {
       if (current) {
         await Axios.post(
-          `${process.env.BLOX_FUNCTION_URL_DEV}/updateCandidate`,
+          `${process.env.BLOX_FUNCTION_URL_DEV}/f_update_candidate`,
           data,
           {
             headers: {
@@ -47,7 +47,7 @@ const EditModal = (props) => {
         );
       } else {
         await Axios.post(
-          `${process.env.BLOX_FUNCTION_URL_DEV}/addCandidate`,
+          `${process.env.BLOX_FUNCTION_URL_DEV}/f_add_candidate`,
           data,
           {
             headers: {
@@ -68,14 +68,12 @@ const EditModal = (props) => {
         onClick={() => {
           handleConfirmModal();
         }}
-        className={`fixed left-0 top-0 z-[999] h-full w-full bg-black/40 ${
-          candidateNewModal ? 'fadeIn' : 'hidden'
-        }`}
+        className={`fixed left-0 top-0 z-[999] h-full w-full bg-black/40 ${candidateNewModal ? 'fadeIn' : 'hidden'
+          }`}
       ></div>
       <div
-        className={`transition-max-width absolute top-8 sm:top-1/2 left-1/2 z-[1000] w-full max-w-[520px] -translate-x-1/2 sm:-translate-y-1/2 transform px-4 duration-200 ${
-          candidateNewModal ? '' : 'hidden'
-        }`}
+        className={`transition-max-width absolute top-8 sm:top-1/2 left-1/2 z-[1000] w-full max-w-[520px] -translate-x-1/2 sm:-translate-y-1/2 transform px-4 duration-200 ${candidateNewModal ? '' : 'hidden'
+          }`}
       >
         <div className='relative float-left w-full rounded-md bg-white py-4 px-6'>
           <div className='float-left mb-5 w-full text-gray-dark text-xl font-bold'>
